@@ -1,0 +1,39 @@
+[project]
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "F", # Pyflakes
+    "UP", # pyupgrade
+    "B", # flake8-bugbear
+    "SIM", # flake8-simplify
+    "I", # isort
+    "ERA001", #Commented out code
+]
+
+[tool.ruff.lint.flake8-bugbear]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool]
+
+[tool.poetry]
+package-mode = false
+name = "Kostra lookup"
+description = "Looks up values from SSB's KOSTRA data set"
+version = "0.0.1"
+authors = [
+    "Even Lislebø <e.lislebo@gmail.com>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.9"
