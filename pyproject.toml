@@ -25,8 +25,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 package-mode = false
-name = "Kostra lookup"
-description = "Looks up values from SSB's KOSTRA data set"
+name = "Barnehagefakta"
+description = "Looks up values from Nasjonalt Barnehageregister and SSB's KOSTRA data set"
 version = "0.0.1"
 authors = [
     "Even Lislebø <e.lislebo@gmail.com>",
