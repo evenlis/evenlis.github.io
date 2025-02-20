@@ -9,8 +9,8 @@ import requests
 class NasjonaltBarnehageregisterService:
     base_url: str
 
-    def select_kindergarden_attributes(self, kindergarden: dict, attributes: list[str]):
-        return {key: kindergarden["data"][key] for key in attributes}
+    def select_kindergarden_attributes(self, data: dict, attributes: list[str]):
+        return {key: data[key] for key in attributes}
 
     def filter_kindergardens(
         self,
@@ -46,14 +46,32 @@ class NasjonaltBarnehageregisterService:
             result,
             match_criteria=NasjonaltBarnehageregisterService.active_municipal_kindergarden,
         )
+        print(json.dumps(municipal, indent=2))
         if attributes:
-            return [self.select_kindergarden_attributes(kindergarden, attributes) for kindergarden in municipal]
+            return [
+                {
+                    "org_nr": kindergarden["org_nr"],
+                    "data": self.select_kindergarden_attributes(kindergarden["data"], attributes),
+                }
+                for kindergarden in municipal
+            ]
         return municipal
+
+
+@dataclass
+class BarnehagefaktaService:
+    base_url: str
+
+    def get_barnehage(self, org_nr: str):
+        return requests.get(f"{self.base_url}/barnehage/orgnr/{org_nr}").json()
 
 
 if __name__ == "__main__":
     nasjonalt_barnehageregister_service = NasjonaltBarnehageregisterService(
         base_url="https://data-nbr.udir.no/v4",
+    )
+    barnehagefakta_service = BarnehagefaktaService(
+        base_url="https://barnehagefakta.no/api",
     )
     tonsberg_kommune_nr = "3905"
     barnehage_attributes = [
