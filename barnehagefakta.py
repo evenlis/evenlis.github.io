@@ -15,11 +15,11 @@ class NasjonaltBarnehageregisterService:
     def filter_kindergardens(
         self,
         kindergardens: list[dict],
-        match_criteria: Callable[[dict], bool],
+        match_criteria: list[Callable[[dict], bool]],
     ) -> list[dict]:
-        return [kindergarden for kindergarden in kindergardens if match_criteria(kindergarden)]
+        return [kindergarden for kindergarden in kindergardens if all(mc(kindergarden) for mc in match_criteria)]
 
-    def active_municipal_kindergarden(kindergarden: dict) -> list[dict]:
+    def active_municipal_kindergarden(kindergarden: dict) -> bool:
         kommunal_barnehage_id = "19"
         offentlig_barnehage_id = "18"
         ordinaer_barnehage_id = "31"
@@ -42,9 +42,13 @@ class NasjonaltBarnehageregisterService:
             {"org_nr": kindergarden["Organisasjonsnummer"], "data": kindergarden}
             for kindergarden in response.json()["EnhetListe"]
         ]
+        tonsberg_aapen_barnehage_org_no = "933429172"
         municipal = self.filter_kindergardens(
             result,
-            match_criteria=NasjonaltBarnehageregisterService.active_municipal_kindergarden,
+            match_criteria=[
+                NasjonaltBarnehageregisterService.active_municipal_kindergarden,
+                lambda kindergarden: kindergarden["org_nr"] != tonsberg_aapen_barnehage_org_no,
+            ],
         )
         print(json.dumps(municipal, indent=2))
         if attributes:

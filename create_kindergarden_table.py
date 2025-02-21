@@ -1,3 +1,4 @@
+import csv
 import json
 
 from barnehagefakta import BarnehagefaktaService, NasjonaltBarnehageregisterService
@@ -36,6 +37,17 @@ if __name__ == "__main__":
         "foreldreundersokelsenTilfredshet",
         "foreldreundersokelsenSvarprosent",
     ]
+    readable_field_mapping = {
+        "orgnr": "Orgnr",
+        "name": "Navn",
+        "oppfyller_pedagognorm": "Oppfyller pedagognorm",
+        "foreldreundersokelsen": "Foreldreundersøkelsen",
+        "antallBarn": "Antall barn",
+        "antallBarnPerAnsatt": "Antall barn per ansatt",
+        "antallBarnPerBarnehagelaerer": "Antall barn per barnehagelærer",
+        "andelAnsatteBarnehagelarer": "Andel ansatte per barnehagelærer",
+        "lekeOgOppholdsarealPerBarn": "Leke- og oppholdsareal per barn",
+    }
     data = []
     for kindergarden in municipal_kindergardens_tonsberg:
         kindergarden_data = barnehagefakta_service.get_barnehage(kindergarden["org_nr"])
@@ -49,13 +61,39 @@ if __name__ == "__main__":
         municipality_indicators = kindergarden_data["indikatorDataKommune"]
         oppfyller_pedagognorm = kindergarden_data["oppfyllerPedagognorm"]
 
+        parent_survey_average = sum(
+            filter(
+                None,
+                [
+                    kindergarden_indicators.get(key, 0)
+                    for key in indicators_parent_survey
+                    if key != "foreldreundersokelsenSvarprosent"
+                ],
+            )
+        ) / len(indicators_parent_survey)
         data.append(
             {
                 "orgnr": org_no,
                 "name": name,
-                "oppfyller_pedagognorm": oppfyller_pedagognorm,
-                "indicators": kindergarden_indicators,
+                "oppfyller_pedagognorm": "Ja" if oppfyller_pedagognorm == "Oppfyller pedagognormen" else "Nei",
+                "foreldreundersokelsen": round(parent_survey_average, ndigits=1),
             }
+            | kindergarden_indicators
         )
 
     print(json.dumps(data, indent=2))
+    with open("docs/_data/barnehager_sammenligning.csv", "w+", newline="") as csvfile:
+        fieldnames = [
+            "orgnr",
+            "name",
+            "oppfyller_pedagognorm",
+            "foreldreundersokelsen",
+            *indicator_selection,
+            # *indicators_parent_survey,
+        ]
+        csv.writer(csvfile).writerow([readable_field_mapping[field] for field in fieldnames])
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        data.sort(key=lambda x: x["foreldreundersokelsen"], reverse=True)
+        for kindergarden in data:
+            csv_data = {key: kindergarden[key] for key in fieldnames}
+            writer.writerow(csv_data)
