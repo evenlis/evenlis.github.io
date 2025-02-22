@@ -3,27 +3,17 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Fon barnehage
+title: Barnehager i Tønsberg
 ---
 
 # Oversikt
 <style type="text/css">
-    body {
-        width: 70%;
-    }
-    div.home {
-        width: 100%;
-    }
-    div.wrapper {
-        width: 100%;
-
-    }
-    .page-content {
-        width: 170%;
-    }
     .barnehagetabell {
         table-layout: fixed;
         width: 100%;
+    }
+    .barnehagetabell th {
+        word-wrap: break-word;
     }
 </style>
 
