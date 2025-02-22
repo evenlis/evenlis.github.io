@@ -3,10 +3,29 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Barnehager
+title: Fon barnehage
 ---
 
 # Oversikt
+<style type="text/css">
+    body {
+        width: 70%;
+    }
+    div.home {
+        width: 100%;
+    }
+    div.wrapper {
+        width: 100%;
+
+    }
+    .page-content {
+        width: 170%;
+    }
+    .barnehagetabell {
+        table-layout: fixed;
+        width: 100%;
+    }
+</style>
 
 <table class="barnehagetabell">
   {% for row in site.data.barnehager_sammenligning %}
@@ -22,4 +41,5 @@ title: Barnehager
     {% endtablerow %}
   {% endfor %}
 </table>
+
 
