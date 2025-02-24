@@ -1,97 +1,97 @@
-Kode,Beskrivelse,Driftskonto?
-10100,Fastlønn,
-10101,Fastlønn lærere,
-10200,Lønn sykevikarer,
+KOSTRA-kode,Beskrivelse,Driftsutgift?
+10100,Lønn i faste stillinger,
+10200,Lønn vikarer,
+10900,Arbeidsgivers andel klp,
+10990,Arbeidsgiveravgift,
+11000,Kontormateriell,y
+11001,"Aviser, tidskrifter, faglitteratur osv",y
+11055,Tekstilforming,y
+11059,Leker,y
+11150,Matvarer,y
+11151,Matvarer m/refusjon,y
+11200,Andre driftsutgifter,y
+11202,Arbeidstøy/verneutstyr,y
+11301,Telefon- og kommunikasjon,y
+11600,Skyss- og kostgodtgjørelse,
+12000,Inventar og utstyr,y
+12001,Læremidler,y
+16000,Brukerbetaling,
+16001,Kostpenger,y
+17000,Refusjon fra staten,
+11620,Skyss - avgiftspliktig,
+10300,Ekstrahjelp,
+10400,Overtid,
+12500,Materialer til vedlikehold,y
+11053,Tegning forming,y
+11058,Skolebibliotek,y
+11100,Medisinske forbruksvarer,y
+11800,Strømutgifter,y
+12300,"Byggetjenester, vedlikehold inkl. matr",y
+14290,Utgiftsført merverdigavgift,y
+17100,Refusjon sykepenger,
+17500,Refusjon fra andre kommuner,
+17290,Refusjon moms påløpt i driftsregnskapet,
+10101,Lønn pedagogisk personell,
+10901,Arbeidsgivers andel pensjon spk,
+11050,Undervisningsmateriell,y
+11300,Porto,y
+11500,Kurs og annen opplæring,
+11950,"Avgifter, gebyrer, lisenser",y
+11052,Fritt skolemateriell,y
+11701,Skyss kommunale brukere uten refusjon,
+13700,Kjøp av tjenester - private,y
+16200,Salgsinntekter u/mva,
+17110,Refusjon fødselspenger,
+10108,Ikke fordelt lønnsbesparelse,
+11900,"Husleie, festeavgifter m.v.",y
+10105,Tillegg forskjøvet vakt,
+10201,Lønn vikarer med refusjon,
+10804,Verneombud/hovedtillitsvalgte,
+11203,Utgiftsdekning - som ikke er oppgavepl.,y
+11650,Klesgodtgjørelse,
+11651,Telefongodtgjørelse,
+12200,Kjøp/leie - maskiner,y
+17900,Internt salg,
+10805,Avgiftspl telefongodtgjørelse,
+11201,Velferdsmidler,y
+11204,"Kino, teater - skoleklasser",
+12100,"Kjøp, leie og leasing av transportmidler",y
+12303,Snørydding,y
+12400,Service og driftsavtaler,y
+12401,Reparasjoner av utstyr,y
+14700,Overføring - private,
+11303,Mobiltelefon,
+11403,Representasjon,
+12700,Konsulenttjenester,
+17700,Refusjon fra andre,
+10905,Gruppelivsforsikring,
+11051,Lærebøker,y
+11140,Medikamenter,y
+11205,Gaver og påskjønninger,
+11851,Personforsikringer,
+12702,Honorarer,
+14850,Tap på krav/fordringer,
+17002,Refusjon lærlinger,
+17003,Øremerkede tilskudd,
+10505,Klesgodtgjørelse,
+10506,Telefongodtgjørelse/ fri telefon,
+11700,Transp/drift av egne og leide transportm,y
+10500,Annen lønn,
+10508,Kilometergodtgjørelse avg.pliktig,
+10509,Verneombud/hovedtillitsvalgte,
+10202,Lønn vikarer ferie,
 10203,Vikar svangerskapspermisjon,
 10204,Ferievikarer,
 10205,Vikar lønnet permisjon,
-10299,Periodisert lønn - HRM rapport,
-10300,"Lønn ekstrahjelp, engasjement",
-10400,Overtid,
-10500,Annen lønn og godtgjørelse,
+10299,Periodisert lønn - hrm rapport,
 10502,Godtgjørelse elektronisk kommunikasjon,
 10599,Motkonto elektronisk kommunikasjon,
-10901,ARBEIDSGIVERS ANDEL PENSJON SPK,
-10902,ARBEIDSGIVERS ANDEL PENSJON SPK,
-10903,ARBEIDSGIVERS ANDEL PENSJON SPK,
-10990,ARBEIDSGIVERAVGIFT,
-11000,KONTORMATERIELL,y
-11001,"AVISER, TIDSKRIFTER, FAGLITTERATUR OSV",y
-11050,UNDERVISNINGSMATERIELL,y
-11051,LÆREBØKER,y
-11052,FRITT SKOLEMATERIELL,y
-11100,MEDISINSKE FORBRUKSVARER,y
-11150,MATVARER,y
-11200,ANDRE DRIFTSUTGIFTER,y
-11302,TELEFON- OG KOMMUNIKASJON,y
-11500,KURS OG ANNEN OPPLÆRING,y
-11600,SKYSS- OG KOSTGODTGJØRELSE,y
-11700,TRANSP/DRIFT AV EGNE OG LEIDE TRANSPORTM,y
-11701,SKYSS KOMMUNALE BRUKERE UTEN REFUSJON,y
-11702,SKYSS KOMMUNALE BRUKERE UTEN REFUSJON,y
-11851,PERSONFORSIKRINGER,
-11950,"AVGIFTER, GEBYRER, LISENSER",y
-12000,INVENTAR OG UTSTYR,y
-12400,SERVICE OG DRIFTSAVTALER,y
-12700,KONSULENTTJENESTER,
-14290,UTGIFTSFØRT MERVERDIGAVGIFT,y
-14500,UTGIFTSFØRT MERVERDIGAVGIFT,y
-16000,BRUKERBETALING,
-16201,SALGSINNTEKTER U/MVA,y
-17000,REFUSJON FRA STATEN,
-17100,REFUSJON SYKEPENGER,
-17101,REFUSJON SYKEPENGER,
-17290,REFUSJON MOMS PÅLØPT I DRIFTSREGNSKAPET,y
-17700,REFUSJON FRA ANDRE,
-18900,INTERNT SALG,y
-19500,INTERNT SALG,y
-10105,Fastlønn lærere,
-10108,Fastlønn lærere,
-10201,Lønn sykevikarer,
-10202,Lønn sykevikarer,
-10505,Godtgjørelse elektronisk kommunikasjon,
-10506,Godtgjørelse elektronisk kommunikasjon,
-10508,Godtgjørelse elektronisk kommunikasjon,
-10509,Godtgjørelse elektronisk kommunikasjon,
-10804,Motkonto elektronisk kommunikasjon,
-10805,Motkonto elektronisk kommunikasjon,
-10900,Motkonto elektronisk kommunikasjon,
-10905,GRUPPELIVSFORSIKRING,
-11053,TEGNING FORMING,y
-11055,TEKSTILFORMING,y
-11058,SKOLEBIBLIOTEK,y
-11059,LEKER,y
-11140,MEDIKAMENTER,y
-11151,MATVARER M/REFUSJON,y
-11201,VELFERDSMIDLER,y
-11202,ARBEIDSTØY/VERNEUTSTYR,y
-11203,UTGIFTSDEKNING - SOM IKKE ER OPPGAVEPL.,y
-11204,"KINO, TEATER - SKOLEKLASSER",y
-11205,GAVER OG PÅSKJØNNINGER,
-11300,PORTO,y
-11301,TELEFON- OG KOMMUNIKASJON,y
-11303,MOBILTELEFON,y
-11403,REPRESENTASJON,
-11620,SKYSS - AVGIFTSPLIKTIG,y
-11650,KLESGODTGJØRELSE,
-11651,TELEFONGODTGJØRELSE,
-11800,STRØMUTGIFTER,y
-11900,"HUSLEIE, FESTEAVGIFTER M.V.",y
-12001,LÆREMIDLER,y
-12100,"KJØP, LEIE OG LEASING AV TRANSPORTMIDLER",y
-12200,KJØP/LEIE - MASKINER,y
-12300,"BYGGETJENESTER, VEDLIKEHOLD INKL. MATR",y
-12303,SNØRYDDING,y
-12401,REPARASJONER AV UTSTYR,y
-12500,MATERIALER TIL VEDLIKEHOLD,y
-12702,HONORARER,
-13700,KJØP AV TJENESTER - PRIVATE,y
-14700,OVERFØRING - PRIVATE,y
-14850,TAP PÅ KRAV/FORDRINGER,
-16001,KOSTPENGER,
-16200,SALGSINNTEKTER U/MVA,y
-17002,REFUSJON LÆRLINGER,
-17003,ØREMERKEDE TILSKUDD,
-17110,REFUSJON FØDSELSPENGER,
-17500,REFUSJON FRA ANDRE KOMMUNER,y
-17900,INTERNT SALG,y
+10902,Pensjon undervisningspersonell spk,
+10903,Kollektiv gruppeliv og ulykkesforsikring,
+11302,Telefonutgifter/elektronisk kommunikasjon,y
+11702,Skyss elever og brukere,
+14500,Overføring til kommuner,y
+16201,Kostpenger,
+17101,Refusjon foreldrepenger,
+18900,Overføringer fra andre (private),
+19500,Bruk av bundne fond,
